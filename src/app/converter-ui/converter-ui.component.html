@@ -1,0 +1,60 @@
+<div class="converter-ui-container">
+  <form class="form-class" [formGroup]="parentForm" (ngSubmit)="(onSubmit)">
+    <mat-grid-list id="grid-list" class="grid" cols="3" rowHeight="2:1">
+      <mat-grid-tile id="category" class="grid">
+        <app-category [parentForm]="parentForm"></app-category>
+      </mat-grid-tile>
+      <mat-grid-tile id="icon" class="grid">
+        <app-category-icon [parentForm]="parentForm"></app-category-icon>
+      </mat-grid-tile>
+      <mat-grid-tile id="converter" class="grid">
+        <app-converter [parentForm]="parentForm"></app-converter>
+      </mat-grid-tile>
+      <mat-grid-tile id="input" class="grid">
+        <app-conversion-input [parentForm]="parentForm"></app-conversion-input
+      ></mat-grid-tile>
+      <mat-grid-tile id="arrow" class="grid">
+        <svg
+          fill="#673ab7"
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="121px"
+          height="121px"
+          viewBox="-16.57 -16.57 447.43 447.43"
+          xml:space="preserve"
+          transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+          stroke="#673ab7"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke="#000000"
+            stroke-width="14.085758000000002"
+          >
+            <g>
+              <path
+                d="M412.398,202.993L288.535,95.289c-1.502-1.305-3.591-1.699-5.463-1.027c-1.873,0.67-3.237,2.3-3.568,4.261l-8.938,52.887 H40.554c-2.684,0-4.976,1.938-5.423,4.583l-3.054,18.067c-0.27,1.597,0.177,3.23,1.223,4.467c1.045,1.237,2.581,1.95,4.2,1.95 h103.982l-2.208,15H8.134c-2.684,0-4.976,1.938-5.423,4.583l-2.634,15.584c-0.27,1.597,0.177,3.229,1.223,4.467 c1.045,1.236,2.581,1.949,4.2,1.949h159.196l-2.206,15H63.505c-2.684,0-4.976,1.938-5.423,4.583l-2.505,14.817 c-0.271,1.597,0.177,3.229,1.222,4.467c1.046,1.237,2.582,1.95,4.201,1.95h190.721l-8.628,51.053 c-0.366,2.168,0.593,4.346,2.439,5.538c0.908,0.586,1.945,0.879,2.982,0.879c1.07,0,2.141-0.312,3.067-0.935l160.272-107.704 c1.421-0.955,2.316-2.518,2.422-4.225C414.385,205.776,413.689,204.116,412.398,202.993z"
+              ></path>
+            </g>
+          </g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path
+                d="M412.398,202.993L288.535,95.289c-1.502-1.305-3.591-1.699-5.463-1.027c-1.873,0.67-3.237,2.3-3.568,4.261l-8.938,52.887 H40.554c-2.684,0-4.976,1.938-5.423,4.583l-3.054,18.067c-0.27,1.597,0.177,3.23,1.223,4.467c1.045,1.237,2.581,1.95,4.2,1.95 h103.982l-2.208,15H8.134c-2.684,0-4.976,1.938-5.423,4.583l-2.634,15.584c-0.27,1.597,0.177,3.229,1.223,4.467 c1.045,1.236,2.581,1.949,4.2,1.949h159.196l-2.206,15H63.505c-2.684,0-4.976,1.938-5.423,4.583l-2.505,14.817 c-0.271,1.597,0.177,3.229,1.222,4.467c1.046,1.237,2.582,1.95,4.201,1.95h190.721l-8.628,51.053 c-0.366,2.168,0.593,4.346,2.439,5.538c0.908,0.586,1.945,0.879,2.982,0.879c1.07,0,2.141-0.312,3.067-0.935l160.272-107.704 c1.421-0.955,2.316-2.518,2.422-4.225C414.385,205.776,413.689,204.116,412.398,202.993z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </mat-grid-tile>
+      <mat-grid-tile id="output" class="grid"
+        ><app-conversion-output
+          [parentForm]="parentForm"
+        ></app-conversion-output
+      ></mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+    29deg,
+    rgba(0, 250, 250, 0.3),
+    rgba(0, 0, 255, 0.3) 70.71%
+  );
+}
+
+.backdrop {
+  align-self: center;
+  border-radius: 10px 10px 10px 10px;
+  width: 66%;
+  height: 80%;
+  background: rgb(255, 255, 255);
+  border-left: solid 2px #673ab7;
+  border-right: solid 2px #673ab7;
+  border-bottom: solid 2px #673ab7;
+}
+
+.toolbar {
+  border-radius: 10px;
+}

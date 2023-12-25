@@ -1,0 +1,14 @@
+<mat-form-field [formGroup]="parentForm">
+  <mat-label for="categoryValue">Select category</mat-label>
+  <select
+    name="categoryValue"
+    formControlName="categoryValue"
+    id="categoryValue"
+    matNativeControl
+    required
+  >
+    <option *ngFor="let converter of converteDefs" value="{{ converter.name }}">
+      {{ converter.name }}
+    </option>
+  </select>
+</mat-form-field>
