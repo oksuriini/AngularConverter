@@ -20,6 +20,9 @@ export class ConverterComponent implements OnInit {
       let catName = this.parentForm.get('categoryValue')?.value;
       this.conversionDefs =
         this.conversionEngineService.getConversionDefs(catName);
+      this.parentForm
+        .get('converterValue')
+        ?.setValue(this.conversionDefs[0].name);
     });
   }
 }

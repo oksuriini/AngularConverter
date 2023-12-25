@@ -1,11 +1,14 @@
 <div id="input" [formGroup]="parentForm">
-  <mat-label></mat-label>
-  <text
-    name="outputValue"
-    formControlName="outputValue"
-    id="outputValue"
-    matInput
-    placeholder=""
-    >{{ outputValue }}</text
-  >
+  <mat-form-field>
+    <mat-label>Output</mat-label>
+    <input
+      name="outputValue"
+      formControlName="outputValue"
+      id="outputValue"
+      matInput
+      placeholder=""
+      readonly
+      value="{{ outputValue }}"
+    />
+  </mat-form-field>
 </div>

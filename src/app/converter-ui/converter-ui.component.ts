@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { ConversionEngineService } from '../shared/conversion-engine.service';
-import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-converter-ui',
@@ -25,7 +24,6 @@ export class ConverterUiComponent implements OnInit {
         this.conversionEngineService.categoryDefs[0].conversions,
       ),
       inputValue: new FormControl(this.conversionEngineService.inputValue),
-      outputValue: new FormControl({ value: '', disabled: true }),
     });
   }
 
