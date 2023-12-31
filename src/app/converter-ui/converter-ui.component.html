@@ -1,6 +1,6 @@
 <div class="converter-ui-container">
   <form class="form-class" [formGroup]="parentForm" (ngSubmit)="(onSubmit)">
-    <mat-grid-list id="grid-list" class="grid" cols="3" rowHeight="2:1">
+    <mat-grid-list id="grid-list" class="grid" cols="3" rowHeight="2.3:1">
       <mat-grid-tile id="category" class="grid">
         <app-category [parentForm]="parentForm"></app-category>
       </mat-grid-tile>
@@ -13,7 +13,9 @@
       <mat-grid-tile id="input" class="grid">
         <app-conversion-input [parentForm]="parentForm"></app-conversion-input
       ></mat-grid-tile>
-      <mat-grid-tile id="arrow" class="grid"> </mat-grid-tile>
+      <mat-grid-tile id="nest" class="grid">
+        <mat-icon fontIcon="keyboard_double_arrow_right" id="arrow"></mat-icon>
+      </mat-grid-tile>
       <mat-grid-tile id="output" class="grid"
         ><app-conversion-output
           [parentForm]="parentForm"

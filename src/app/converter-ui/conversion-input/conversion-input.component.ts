@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { ConversionEngineService } from '../../shared/conversion-engine.service';
 
 @Component({
   selector: 'app-conversion-input',
@@ -9,11 +10,39 @@ import { FormGroup } from '@angular/forms';
 export class ConversionInputComponent implements OnInit {
   @Input() parentForm!: FormGroup;
 
-  inputValue!: string;
+  constructor(private conversionEngineService: ConversionEngineService) {}
 
   ngOnInit(): void {
-    this.parentForm.get('inputValue')?.valueChanges.subscribe((value) => {
-      this.inputValue = value;
+    // On category change, clear conversion input field
+    this.parentForm.get('categoryValue')?.valueChanges.subscribe(() => {
+      this.conversionInUnitText = 'Input';
+      this.parentForm.get('conversionInput')?.setValue('');
     });
+
+    // On converter change, clear input field's text to match converter
+    this.parentForm
+      .get('converterValue')
+      ?.valueChanges.subscribe((convName) => {
+        console.log(convName);
+        let catName = this.parentForm.get('categoryValue')?.value;
+        if (catName != '') {
+          let conversionDef =
+            this.conversionEngineService.getCurrentConversionDef(
+              catName,
+              convName,
+            );
+          this.conversionInUnitText = 'Input as ' + conversionDef?.inUnit;
+        }
+
+        // If input field has value during converter change
+        // reinput the value to field, so conversion is done
+        // immediately after converter change
+        if (this.parentForm.get('conversionInput')?.value !== '' || null) {
+          this.parentForm
+            .get('conversionInput')
+            ?.setValue(this.parentForm.get('conversionInput')?.value);
+        }
+      });
   }
+  conversionInUnitText = 'Input';
 }

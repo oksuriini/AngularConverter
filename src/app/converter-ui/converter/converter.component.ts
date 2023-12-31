@@ -11,11 +11,14 @@ import { ConversionEngineService } from '../../shared/conversion-engine.service'
 export class ConverterComponent implements OnInit {
   @Input() parentForm!: FormGroup;
 
+  // variable holds current converter of the current category
   conversionDefs!: ConversionDef[];
 
   constructor(private conversionEngineService: ConversionEngineService) {}
 
   ngOnInit(): void {
+    // On category change get all converters of the category
+    // to be rerendered on the converters list
     this.parentForm.get('categoryValue')?.valueChanges.subscribe((value) => {
       let catName = this.parentForm.get('categoryValue')?.value;
       this.conversionDefs =

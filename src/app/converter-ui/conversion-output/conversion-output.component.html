@@ -1,14 +1,10 @@
-<div id="input" [formGroup]="parentForm">
-  <mat-form-field>
-    <mat-label>Output</mat-label>
-    <input
-      name="outputValue"
-      formControlName="outputValue"
-      id="outputValue"
-      matInput
-      placeholder=""
-      readonly
-      value="{{ outputValue }}"
-    />
-  </mat-form-field>
-</div>
+<mat-form-field [formGroup]="parentForm" class="example-full-width">
+  <mat-label for="conversionOutput" id="conversionOutput">Output</mat-label>
+  <input
+    matInput
+    readonly
+    type="number"
+    name="conversionOutput"
+    formControlName="conversionOutput"
+  />
+</mat-form-field>

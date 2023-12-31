@@ -15,6 +15,7 @@ export class CategoryComponent implements OnInit {
 
   constructor(private conversionEngineService: ConversionEngineService) {}
   ngOnInit(): void {
+    // Fetch all the categories and set them to converteDefs
     this.converteDefs = this.conversionEngineService.getConverterCategoryDefs();
   }
 }

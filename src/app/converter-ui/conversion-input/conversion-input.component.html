@@ -1,14 +1,11 @@
-<div id="input" [formGroup]="parentForm">
-  <mat-form-field class="example-full-width">
-    <mat-label>Input</mat-label>
-    <input
-      name="inputValue"
-      formControlName="inputValue"
-      id="inputValue"
-      matInput
-      placeholder=""
-      value="{{ inputValue }}"
-      required
-    />
-  </mat-form-field>
-</div>
+<mat-form-field [formGroup]="parentForm" class="example-full-width">
+  <mat-label for="conversionInput" id="conversionInput">{{
+    conversionInUnitText
+  }}</mat-label>
+  <input
+    matInput
+    name="conversionInput"
+    type="number"
+    formControlName="conversionInput"
+  />
+</mat-form-field>

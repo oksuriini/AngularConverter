@@ -23,7 +23,11 @@ export class ConverterUiComponent implements OnInit {
       converterValue: new FormControl(
         this.conversionEngineService.categoryDefs[0].conversions,
       ),
-      inputValue: new FormControl(this.conversionEngineService.inputValue),
+      conversionInput: new FormControl(''),
+      conversionOutput: new FormControl(''),
+      iconName: new FormControl(
+        this.conversionEngineService.categoryDefs[0].icon,
+      ),
     });
   }
 
