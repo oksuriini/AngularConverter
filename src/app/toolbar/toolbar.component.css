@@ -1,3 +1,7 @@
 #toolbar-title {
   margin: auto;
 }
+
+#pointer-info {
+  cursor: pointer;
+}

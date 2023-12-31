@@ -10,6 +10,7 @@ import { ConversionEngineService } from '../../shared/conversion-engine.service'
 export class ConversionInputComponent implements OnInit {
   @Input() parentForm!: FormGroup;
 
+  conversionInUnitText = 'Input';
   constructor(private conversionEngineService: ConversionEngineService) {}
 
   ngOnInit(): void {
@@ -23,7 +24,6 @@ export class ConversionInputComponent implements OnInit {
     this.parentForm
       .get('converterValue')
       ?.valueChanges.subscribe((convName) => {
-        console.log(convName);
         let catName = this.parentForm.get('categoryValue')?.value;
         if (catName != '') {
           let conversionDef =
@@ -44,5 +44,4 @@ export class ConversionInputComponent implements OnInit {
         }
       });
   }
-  conversionInUnitText = 'Input';
 }

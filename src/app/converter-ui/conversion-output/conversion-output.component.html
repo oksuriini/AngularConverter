@@ -1,5 +1,7 @@
 <mat-form-field [formGroup]="parentForm" class="example-full-width">
-  <mat-label for="conversionOutput" id="conversionOutput">Output</mat-label>
+  <mat-label for="conversionOutput" id="conversionOutput">{{
+    conversionOutUnitText
+  }}</mat-label>
   <input
     matInput
     readonly

@@ -1,0 +1,25 @@
+#content {
+  display: flex;
+  justify-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+  flex-direction: column;
+}
+#back-button {
+  justify-self: start;
+  font: "Helvetica";
+  font-family: Helvetica, sans-serif;
+  background: rgb(222, 222, 222);
+  border: none;
+  size: auto;
+  border-radius: 7px;
+  color: rgb(39, 41, 43);
+  padding: 5px;
+  max-width: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#back-button:hover {
+  background: rgb(180, 180, 180);
+}

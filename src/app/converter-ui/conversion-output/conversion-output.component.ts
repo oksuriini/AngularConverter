@@ -35,5 +35,20 @@ export class ConversionOutputComponent implements OnInit {
         this.parentForm.controls['conversionOutput'].setValue(outValue);
       }
     });
+
+    // On converter change change output string
+    this.parentForm
+      .get('converterValue')
+      ?.valueChanges.subscribe((convName) => {
+        let catName = this.parentForm.get('categoryValue')?.value;
+        if (catName != '') {
+          let conversionDef =
+            this.conversionEngineService.getCurrentConversionDef(
+              catName,
+              convName,
+            );
+          this.conversionOutUnitText = 'Output as ' + conversionDef?.outUnit;
+        }
+      });
   }
 }

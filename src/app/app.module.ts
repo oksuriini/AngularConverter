@@ -18,6 +18,14 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { InfoScreenComponent } from './info-screen/info-screen.component';
+import {
+  RouterLinkActive,
+  RouterModule,
+  RouterOutlet,
+  provideRouter,
+} from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -29,6 +37,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ConverterComponent,
     ConversionInputComponent,
     ConversionOutputComponent,
+    InfoScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,8 +52,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
+    RouterOutlet,
+    RouterLinkActive,
+    RouterModule,
   ],
-  providers: [],
+  providers: [provideRouter(routes)],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
