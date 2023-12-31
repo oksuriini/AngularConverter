@@ -15,6 +15,8 @@ export class ConversionEngineService {
   tempDefs: ConversionDef[] = [
     new ConversionDef('C to F', 9 / 5, 0, 32, 'C', 'F'),
     new ConversionDef('F to C', 5 / 9, -32, 0, 'F', 'C'),
+    new ConversionDef('C to K', 1, 0, 273.15, 'C', 'K'),
+    new ConversionDef('K to C', 1, 0, -273.15, 'K', 'C'),
   ];
   distanceDefs: ConversionDef[] = [
     new ConversionDef('Kms to Miles', 0.621371, 0, 0, 'Km', 'Mi'),
