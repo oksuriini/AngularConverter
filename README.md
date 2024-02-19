@@ -2,6 +2,19 @@
 
 Simple unitconverter app where user is able to convert units based on categories.
 
+
+![Distance category](Distance.png)
+Select category for converters from a list.
+
+![Distance converter](Distance-nmi.png)
+Select converter from a list.
+
+![Distance input](Distance-done.png)
+Type in amount you want to convert.
+
+![Distance output](Distance-convert.png)
+The output will show converted value.
+
 # Generated angular stuff below
 
 ## Development server
