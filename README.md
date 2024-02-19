@@ -1,6 +1,8 @@
-# 02Unitconverter
+# Unitconverter App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+Simple unitconverter app where user is able to convert units based on categories.
+
+# Generated angular stuff below
 
 ## Development server
 
