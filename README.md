@@ -2,6 +2,29 @@
 
 Simple unitconverter app where user is able to convert units based on categories.
 
+## Quick install
+
+You Need:
+ - Node
+ - npm
+ - AngularCLI (optional)
+
+Clone repo: `git clone https://github.com/oksuriini/AngularConverter.git`
+
+Install dependencies: `cd AngularConverter && npm i`
+
+Run: `ng serve` or `npm run start`
+
+## Alternatively:
+
+Run the dockerized version of this repo with command below:
+
+`docker run -d --rm -p 80:80 --name angular-converter oksuriini/unitconverter:1.0`
+
+[Docker repo](https://hub.docker.com/repository/docker/oksuriini/unitconverter/general)
+
+
+### Quick example
 
 ![Distance category](Distance.png)
 Select category for converters from a list.
@@ -14,6 +37,8 @@ Type in amount you want to convert.
 
 ![Distance output](Distance-convert.png)
 The output will show converted value.
+
+
 
 # Generated angular stuff below
 
